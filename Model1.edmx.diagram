@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="88eccee42fc94757864e51af5d45a239" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="TMdbModel.Andon" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TMdbModel.BOM" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TMdbModel.DelayRecord" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TMdbModel.InspectionList" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TMdbModel.JITLineSeatMfgReport" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TMdbModel.MODEL" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TMdbModel.MODEL_DEATILS" Width="1.5" PointX="6.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TMdbModel.OperatorWorkTime" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="TMdbModel.PLCAddressList" Width="1.5" PointX="6.75" PointY="5.75" />
+        <EntityTypeShape EntityType="TMdbModel.PrnFile" Width="1.5" PointX="8.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TMdbModel.ReworkTable" Width="1.5" PointX="8.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TMdbModel.SEAT_DATA" Width="1.5" PointX="8.75" PointY="7.75" />
+        <EntityTypeShape EntityType="TMdbModel.ShiftSetting" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TMdbModel.StationAssignment" Width="1.5" PointX="2.75" PointY="9.75" />
+        <EntityTypeShape EntityType="TMdbModel.STD_TorqueTable" Width="1.5" PointX="10.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TMdbModel.TaskListTable" Width="1.5" PointX="10.75" PointY="3.75" />
+        <EntityTypeShape EntityType="TMdbModel.Tool_IPAddress" Width="1.5" PointX="12.75" PointY="0.75" />
+        <EntityTypeShape EntityType="TMdbModel.TorquePset" Width="1.5" PointX="0.75" PointY="12.75" />
+        <EntityTypeShape EntityType="TMdbModel.USER" Width="1.5" PointX="2.75" PointY="12.75" />
+        <EntityTypeShape EntityType="TMdbModel.VarTable" Width="1.5" PointX="12.75" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

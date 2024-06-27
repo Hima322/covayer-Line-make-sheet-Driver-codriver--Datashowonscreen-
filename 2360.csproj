@@ -1,0 +1,634 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F20F5D0E-3F51-47F7-A12E-C833FB29B27E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebApplication2</RootNamespace>
+    <AssemblyName>WebApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44397</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>packages\ClosedXML.Signed.0.95.4\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>packages\DocumentFormat.OpenXml.2.7.2\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.8.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="S7.Net, Version=0.13.0.0, Culture=neutral, PublicKeyToken=d5812d469e84c693, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\S7.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.FileSystem.Primitives.4.0.1\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.IO.Packaging, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.IO.Packaging.4.0.0\lib\net46\System.IO.Packaging.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Text.Encodings.Web, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.8.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.8.0.0\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="andon\maintenance_delay.aspx" />
+    <Content Include="andon\material_delay.aspx" />
+    <Content Include="andon\operator_delay.aspx" />
+    <Content Include="andon\index.aspx" />
+    <Content Include="andon\projection.aspx" />
+    <Content Include="andon\quality_delay.aspx" />
+    <Content Include="bom\add.aspx" />
+    <Content Include="bom\edit.aspx" />
+    <Content Include="bom\index.aspx" />
+    <Content Include="bom\print.aspx" />
+    <Content Include="css\libs\animate.css" />
+    <Content Include="css\libs\bootstrap.min.css" />
+    <Content Include="css\libs\font-awesome.css" />
+    <Content Include="css\libs\font-awesome.min.css" />
+    <Content Include="css\libs\toastify.min.css" />
+    <Content Include="image\dcnutrunner.png" />
+    <Content Include="image\empty.png" />
+    <Content Include="image\icon\arrow-left.svg" />
+    <Content Include="image\icon\check.svg" />
+    <Content Include="image\icon\eye.svg" />
+    <Content Include="image\icon\more.svg" />
+    <Content Include="image\icon\pencil.svg" />
+    <Content Include="image\icon\qr-code.svg" />
+    <Content Include="image\icon\quote.svg" />
+    <Content Include="image\icon\tools.svg" />
+    <Content Include="image\icon\trash.svg" />
+    <Content Include="image\icon\user.png" />
+    <Content Include="image\icon\x.svg" />
+    <Content Include="image\login.png" />
+    <Content Include="image\invalid.jpg" />
+    <Content Include="image\logo.png" />
+    <Content Include="image\printing.gif" />
+    <Content Include="image\scaning.gif" />
+    <Content Include="image\man_with_scanner.png" />
+    <Content Include="image\tmlogo.png" />
+    <Content Include="index.aspx" />
+    <Content Include="js\libs\bootstrap.bundle.min.js" />
+    <Content Include="js\libs\jquery.min.js" />
+    <Content Include="js\libs\moment.min.js" />
+    <Content Include="js\libs\plotly.min.js" />
+    <Content Include="js\libs\sweetalert2.all.min.js" />
+    <Content Include="js\libs\toastify-js.js" />
+    <Content Include="js\libs\xlsx.full.min.js" />
+    <Content Include="login.aspx" />
+    <Content Include="andon\main.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Andon.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="andon\maintenance_delay.aspx.cs">
+      <DependentUpon>maintenance_delay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="andon\maintenance_delay.aspx.designer.cs">
+      <DependentUpon>maintenance_delay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="andon\material_delay.aspx.cs">
+      <DependentUpon>material_delay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="andon\material_delay.aspx.designer.cs">
+      <DependentUpon>material_delay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="andon\operator_delay.aspx.cs">
+      <DependentUpon>operator_delay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="andon\operator_delay.aspx.designer.cs">
+      <DependentUpon>operator_delay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="andon\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="andon\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="andon\projection.aspx.cs">
+      <DependentUpon>projection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="andon\projection.aspx.designer.cs">
+      <DependentUpon>projection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="andon\quality_delay.aspx.cs">
+      <DependentUpon>quality_delay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="andon\quality_delay.aspx.designer.cs">
+      <DependentUpon>quality_delay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BOM.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="bom\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bom\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bom\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bom\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bom\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bom\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="bom\print.aspx.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="bom\print.aspx.designer.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DelayRecord.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="InspectionList.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="JITLineSeatMfgReport.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL_DEATILS.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="monitor\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="monitor\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OperatorWorkTime.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="order\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="other\Cryption.cs" />
+    <Compile Include="other\off.aspx.cs">
+      <DependentUpon>off.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="other\off.aspx.designer.cs">
+      <DependentUpon>off.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PLCAddressList.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrnFile.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="andon\main.aspx.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="andon\main.aspx.designer.cs">
+      <DependentUpon>main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="qrlabel\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="qrlabel\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="report\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="report\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReworkTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SEAT_DATA.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShiftSetting.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="StationAssignment.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="station\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\print.aspx.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\print.aspx.designer.cs">
+      <DependentUpon>print.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station1.aspx.cs">
+      <DependentUpon>station1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station1.aspx.designer.cs">
+      <DependentUpon>station1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station13.aspx.cs">
+      <DependentUpon>station13.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station13.aspx.designer.cs">
+      <DependentUpon>station13.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station16.aspx.cs">
+      <DependentUpon>station16.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station16.aspx.designer.cs">
+      <DependentUpon>station16.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station2.aspx.cs">
+      <DependentUpon>station2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station2.aspx.designer.cs">
+      <DependentUpon>station2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station3.aspx.cs">
+      <DependentUpon>station3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station3.aspx.designer.cs">
+      <DependentUpon>station3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station4.aspx.cs">
+      <DependentUpon>station4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station4.aspx.designer.cs">
+      <DependentUpon>station4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station5.aspx.cs">
+      <DependentUpon>station5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station5.aspx.designer.cs">
+      <DependentUpon>station5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station6.aspx.cs">
+      <DependentUpon>station6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station6.aspx.designer.cs">
+      <DependentUpon>station6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station7.aspx.cs">
+      <DependentUpon>station7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station7.aspx.designer.cs">
+      <DependentUpon>station7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\station8.aspx.cs">
+      <DependentUpon>station8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\station8.aspx.designer.cs">
+      <DependentUpon>station8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\stationfsb.aspx.cs">
+      <DependentUpon>stationfsb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\stationfsb.aspx.designer.cs">
+      <DependentUpon>stationfsb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\stationfsc.aspx.cs">
+      <DependentUpon>stationfsc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\stationfsc.aspx.designer.cs">
+      <DependentUpon>stationfsc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="station\task.aspx.cs">
+      <DependentUpon>task.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="station\task.aspx.designer.cs">
+      <DependentUpon>task.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="STD_TorqueTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TaskListTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Tool_IPAddress.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TorquePset.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="USER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\entry.aspx.cs">
+      <DependentUpon>entry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\entry.aspx.designer.cs">
+      <DependentUpon>entry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user\info.aspx.cs">
+      <DependentUpon>info.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user\info.aspx.designer.cs">
+      <DependentUpon>info.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="variant\add.aspx.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="variant\add.aspx.designer.cs">
+      <DependentUpon>add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="variant\edit.aspx.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="variant\edit.aspx.designer.cs">
+      <DependentUpon>edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VarTable.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="monitor\index.aspx" />
+    <Content Include="order\index.aspx" />
+    <Content Include="other\off.aspx" />
+    <Content Include="other\temp.prn" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="packages.config" />
+    <Content Include="qrlabel\index.aspx" />
+    <Content Include="report\index.aspx" />
+    <Content Include="station\index.aspx" />
+    <Content Include="station\print.aspx" />
+    <Content Include="station\station1.aspx" />
+    <Content Include="station\station13.aspx" />
+    <Content Include="station\station16.aspx" />
+    <Content Include="station\station2.aspx" />
+    <Content Include="station\station3.aspx" />
+    <Content Include="station\station4.aspx" />
+    <Content Include="station\station5.aspx" />
+    <Content Include="station\station6.aspx" />
+    <Content Include="station\station7.aspx" />
+    <Content Include="station\station8.aspx" />
+    <Content Include="station\stationfsb.aspx" />
+    <Content Include="station\stationfsc.aspx" />
+    <Content Include="station\task.aspx" />
+    <Content Include="user\add.aspx" />
+    <Content Include="user\edit.aspx" />
+    <Content Include="user\entry.aspx" />
+    <Content Include="user\index.aspx" />
+    <Content Include="user\info.aspx" />
+    <Content Include="variant\add.aspx" />
+    <Content Include="variant\edit.aspx" />
+    <Content Include="Web.Config" />
+    <None Include="Web.Debug.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </None>
+    <None Include="Web.Release.Config">
+      <DependentUpon>Web.Config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>48064</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44397/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
